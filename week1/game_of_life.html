@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    .center {
+        margin: auto;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    </style>
+    <title>Game of Life</title>
+</head>
+<body>
+    <div class="center" id="board">TEST</div>
+</body>
+</html>
+
+<script>
+    (function() {
+        
+      
+     makeRequest();
+      async function makeRequest() {
+        const url = '10two_dimensional_arrays.php';
+       
+    
+        try {
+          const response = await fetch(url, {
+            method: 'POST', 
+           });
+          
+          const txt = await response.text();
+          
+          document.getElementById("board").innerHTML = txt;
+          //console.log(json.user_name1);
+        } catch (error) {
+            console.error (error);
+         
+        }
+      }
+      
+    })();
+    </script>
