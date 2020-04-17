@@ -21,7 +21,7 @@
             $randColor = '#'.strtoupper(dechex(rand(0x000000, 0xFFFFFF)));
 
             echo $randColor;    
-            exit;
+          
             var_dump($a);
             print_r ($a);
              //replace this code to echo out the randColor in place of [color]

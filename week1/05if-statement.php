@@ -9,11 +9,7 @@
         $a = 0;
         $b = false;
         $value = 'foo';
-        /*
-         * The first set of if statements is recommended
-         * 
-         * Conditions >, <, <=, >=, ==, ===, !=, !==
-         */
+
         ?>  
         <?php if ($a === $b): ?>
             'A === B'
@@ -40,14 +36,7 @@
 
 
         <?php
-        /*
-         * How to do an else statement
-         * 
-         * Triple equals ( === ) will check the value and the
-         * variable type
-         * 
-         * Double equals ( == ) will only check the value.
-         */
+       
         $expression = false;
         ?>
 
@@ -59,10 +48,6 @@
         <?php else: ?>
             Otherwise this will show.
         <?php endif; ?>
-
-
-
-
 
     </body>
 </html>
