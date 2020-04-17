@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <?php
-/*
- * http://php.net/manual/en/language.variables.basics.php
- * Variables in PHP are represented by a dollar sign followed by
- * the name of the variable. The variable name is case-sensitive.
- * 
- * A valid variable name starts with a letter or underscore, 
- * followed by any number of letters, numbers, or underscores.
- */
-
-    $myvar = 'hello';
-    
-    
-    /*
-     * Variables are also loosely typed.  So you can change the 
-     * variable type on the fly.
-     * 
-     */
-    
+    // This is how you do a comment on one line
+    /* 
+        and this one spans
+        multiple lines
+    */
+ 
+    // and now the funky variable stuff
+     $myvar = 'hello';
      $myvar = 10; // int
      $myvar = true; //boolean
      $myvar = array(); // array
