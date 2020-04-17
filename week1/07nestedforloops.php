@@ -31,10 +31,10 @@
             define("ROWS", 5);
             define("COLS", 8);
             
-            for($tr = 1; $tr <= ROWS; $tr++):?>
+            for($row = 1; $row <= ROWS; $row++):?>
             <tr> 
-            <?php for($td = 1; $td <= COLS; $td++):?>
-                <td> <?php echo "($tr, $td)"; ?> </td>
+            <?php for($col = 1; $col <= COLS; $col++):?>
+                <td> <?php echo "($row, $col)"; ?> </td>
             <?php endfor; ?>                
             </tr>
         <?php endfor; ?>
