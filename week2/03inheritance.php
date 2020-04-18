@@ -1,10 +1,6 @@
 <?php
-    /*
-        This class is the same as the one in 01person.php but you should notice the static variable objectCount. 
-        The variable is independent of the current object and is the same for all objects of this class
-        Note how the variable is referenced using self:: within the class and then Person:: outside of the class
-    */
-class Person {
+
+abstract class Person {
     private $first, $last;
     private static $objectCount=0;
 
@@ -41,10 +37,34 @@ class Person {
     }
 }
 
+class Student extends Person {
+    private $studentId;
+    private $gpa;
+    
+    public function __construct ($f, $l, $id, $gpa) {
+        $this->gpa = $gpa;
+        $this->studentId = $id;
 
-$p = new Person('Mickey', 'Mouse');
-$p2 = new Person('Donald', 'Duck');
+        parent::__construct($f, $l);
+        
+    }
 
-echo Person::getObjectCount();
+    public function getGPA () {
+        return $this->gpa;
+    }
+    public function getStudentId () {
+
+        return $this->studentId;
+    }
+
+
+}
+
+$s = new Student('Mickey', 'Mouse', '123456789', 3.5);
+
+
+echo Student::getObjectCount() . "<br />";
+echo $s->getFullName() . "<br />";
+echo $s->getStudentId() . "<br />";
 
 ?>
