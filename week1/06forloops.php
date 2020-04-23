@@ -9,16 +9,16 @@
 
         <p>These all produce the same result but are coded differently</p>
         
-        <h2>For loop with : and endfor;</h2>
         
+        <h2>For loop with { and }</h2>
         <ul>   
         <?php for ($index = 1; $index <= 10; $index++) { ?>
             <li><?php echo $index; ?> </li>    
         <?php } ?>
         </ul> 
         
-        <h2>For loop with { and }</h2>
-
+        
+        <h2>For loop with : and endfor;</h2>
         <ul>
         <?php for($index = 1; $index <= 10; $index++):?>
             <li> <?php echo $index;?> </li>
