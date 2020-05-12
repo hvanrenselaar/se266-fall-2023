@@ -27,7 +27,7 @@
     <title>Demo Forms</title>
 </head>
 <body>
-    <h1>Demo Forms - ***</h1>
+    <h1>Demo Forms</h1>
     <form action="demoforms.php" method="post">
         <input type="text" name="val1" value="Whatever" />
         <input type="checkbox" value="Adult" name="adult" checked>Adult<br />

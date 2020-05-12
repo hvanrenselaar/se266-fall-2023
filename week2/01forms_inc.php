@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Playing with Forms</title>
         <style type="text/css">
-        .wrapper {
+            .wrapper {
                 display: grid;
                 grid-template-columns: 180px 300px;
             }
