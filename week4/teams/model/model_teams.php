@@ -38,9 +38,29 @@
         return ($results);
     }
    
-    $res = addTeam ('Ajax', 'Eredivisie');
-    echo $res;
+    function addTeam2 ($t, $d) {
+        global $db;
+        $results = "Not added";
+
+        $stmt = $db->prepare("INSERT INTO teams SET teamName = :team, division = :division");
+       
+        $stmt->bindValue(':team', $t);
+        $stmt->bindValue(':division', $d);
+       
+        $stmt->execute();
+        
+        if ($stmt->rowCount() > 0) {
+            $results = 'Data Added';
+        }
+       
+        $stmt->closeCursor();
+       
+        return ($results);
+    }
+   
     
+    // $result = addTeam2 ('Feyenoord', 'Eredivisie');
+    // echo $result;
    
     
 
