@@ -2,12 +2,12 @@
 include __DIR__ . '/util.php';
 
 if (isGetRequest()) {
-    //echo "*** GET ***";
+   //echo "*** GET ***";
     var_dump ($_GET);
 }
 
 if (isPostRequest()) {
-   // echo "*** POST ***";
+    // echo "*** POST ***";
     var_dump ($_POST);
 }
 

@@ -23,6 +23,7 @@
             $id = filter_input(INPUT_POST, 'teamId');
             $teamName = filter_input(INPUT_POST, 'team');
             $division = filter_input(INPUT_POST, 'division');
+            
         } 
             
        

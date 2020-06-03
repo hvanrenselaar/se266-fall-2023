@@ -19,7 +19,7 @@
     
     function addTeam ($t, $d) {
         global $db;
-        
+        $results = 'Data NOT Added';
         $stmt = $db->prepare("INSERT INTO teams SET teamName = :team, division = :division");
 
         $stmt->bindValue(':team', $t);
@@ -52,7 +52,10 @@
         
         return ($results);
     }
- 
+    
+    
+    
+    
     function deleteTeam ($id) {
         global $db;
         
@@ -69,6 +72,7 @@
     }
     
   
+  
 
     function getTeam ($id) {
          global $db;
@@ -84,6 +88,11 @@
          
          return ($result);
     }
+
+  
+
+    
+    
     
   
   
