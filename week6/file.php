@@ -11,6 +11,10 @@ while (!feof($file)) {
 }
 */
 
+if (!file_exists("uploads/schools.csv")) {
+   echo "File does not exist";
+   exit;
+}
 $file = fopen ('uploads/schools.csv', 'rb');
 $i = 0;
 while (!feof($file) && $i<10) {
