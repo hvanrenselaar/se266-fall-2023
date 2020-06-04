@@ -92,19 +92,13 @@
   function searchTeams ($column, $searchValue) {
       global $db;
         
-      
-      $stmt = $db->prepare("SELECT * FROM test WHERE $column LIKE :search");
-
-           
-       
-        $results = [];
+       $results = [];
         $stmt = $db->prepare("SELECT id, teamName, division FROM teams WHERE $column LIKE :search");
         $search = '%'.$searchValue.'%';
-        $binds = array(
-              ":search" => $search
-        );
+        $stmt->bindValue(':search', $search);
+       
         
-        if ( $stmt->execute($binds) && $stmt->rowCount() > 0 ) {
+        if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
              $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
          }

@@ -8,7 +8,7 @@
               <option value="division">Division</option>
               
           </select>
-       <input type="text" name="fieldValue" />
+       <input type="text" name="fieldValue" value=<?= $fieldValue ?> />
       <button type="submit">Search</button>
       
   </form>
