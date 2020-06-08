@@ -92,6 +92,7 @@
     // echo $count;
     function checkLogin ($userName, $password) {
         global $db;
+        
         // SELECT * FROM users WHERE userName = 'Tom' and userPassword = sha1('Brady')
         $sql = "SELECT * FROM users WHERE userName=:u and userPassword = sha1(:p)";
         $stmt = $db->prepare($sql);
@@ -105,7 +106,7 @@
         
      }
     
-    $result = checkLogin('donald', 'ducky');
+    
     
     // if ($result) echo "Logged in"; else echo "Not logged in";
     

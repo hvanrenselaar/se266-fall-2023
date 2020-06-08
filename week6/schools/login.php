@@ -1,10 +1,22 @@
 <?php
     include_once __DIR__ . "/models/model_schools.php";
     include_once __DIR__ . "/includes/functions.php";
-    
+    session_start();
+    $_SESSION['isLoggedIn'] = false;
+
     if (isPostRequest()) {
-        // your logic here
-        header ('Location: upload.php');
+        $username = filter_input(INPUT_POST, 'userName');
+        $password = filter_input(INPUT_POST, 'password');
+       
+        if (checkLogin ($username, $password)) {
+            $_SESSION['isLoggedIn'] = true;
+            header ('Location: upload.php');
+        } else {
+           $message = "You did not specify the correct credentials";
+           echo $message;
+           exit;
+        }
+        
     
     }
 ?>
