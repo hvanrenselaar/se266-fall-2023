@@ -1,7 +1,9 @@
 <?php
 
 // $names = file('names.txt');
-// var_dump ($names); // shows an array
+// echo $names[0];
+//var_dump ($names); // shows an array
+
 
 
 // $file = fopen ('names.txt', 'rb');
@@ -16,7 +18,7 @@ if (!file_exists("uploads/schools.csv")) {
 }
 $file = fopen ('uploads/schools.csv', 'rb');
 $i = 0;
-while (!feof($file) && $i<1) {
+while (!feof($file) && $i<10) {
    
    $school = fgetcsv($file);
    

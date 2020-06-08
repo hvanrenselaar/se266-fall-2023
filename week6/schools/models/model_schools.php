@@ -12,7 +12,7 @@
         $file = fopen ($fname, 'rb');
         // ignore first line
         $row = fgetcsv($file);
-        $stmt = $db->prepare("INSERT INTO schools SET schoolName = :name, schoolCity = :city, schoolState = :state");
+        
         while (!feof($file) && $i++ < 10000) {
             $row = fgetcsv($file);
             $school = str_replace("'", "''", htmlspecialchars ($row[0]));
@@ -41,13 +41,7 @@
        return 0;
    }
    
-   function checkLogin ($userName, $password) {
-      // you will need to create logic yourself
-      // remember password will be encrypted
-      // return true if successful login, false otherwise
-       
-   }
-   
+  
    function getSchoolCount() {
        global $db;
 
@@ -64,6 +58,7 @@
             $sql .= " AND schoolName LIKE :schoolName";
             $binds['schoolName'] = '%'.$name.'%';
        }
+      
        if ($city != "") {
            $sql .= " AND schoolCity LIKE :city";
            $binds['city'] = '%'.$city.'%';
@@ -82,17 +77,36 @@
         return ($results);
    }
    
+ 
+
    // make sure these functions work
     // $schools = getSchools ('New England', '', 'RI');
    
-    // var_dump ($schools);
+    //  var_dump ($schools);
+    
     //   $b = checkLogin('donald', 'duck');
     //    if ($b) echo "Logged in"; else echo "Not logged in";
 
     //insertSchoolsFromFile('../uploads/schools.csv');
-    //$count= getSchoolCount();
-    //echo $count;
-   
-
+    // $count= getSchoolCount();
+    // echo $count;
+    function checkLogin ($userName, $password) {
+        global $db;
+        // SELECT * FROM users WHERE userName = 'Tom' and userPassword = sha1('Brady')
+        $sql = "SELECT * FROM users WHERE userName=:u and userPassword = sha1(:p)";
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':u', $userName);
+        $stmt->bindValue(':p', $password);
+       
+        $stmt->execute();
+        
+        return ($stmt->rowCount() > 0);
+         
+        
+     }
+    
+    $result = checkLogin('donald', 'ducky');
+    
+    // if ($result) echo "Logged in"; else echo "Not logged in";
     
    
