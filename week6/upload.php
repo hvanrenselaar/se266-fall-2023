@@ -1,6 +1,7 @@
 <?php
 
 if (isset ($_FILES['file1'])) {
+    var_dump ($_FILES);
     $tmp_name = $_FILES['file1']['tmp_name'];
     $path = getcwd() .DIRECTORY_SEPARATOR . 'uploads';
     $new_name = $path . DIRECTORY_SEPARATOR . $_FILES['file1']['name'];
@@ -11,9 +12,9 @@ if (isset ($_FILES['file1'])) {
 
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
-<input type="file" name="file1">
-<input type="submit" value="Upload">
-
+    <input type="file" name="file1">
+    <input type="submit" value="Upload">
+</form> 
 <?php 
 if (isset ($_FILES['file1'])) {
     echo "File uploaded";
@@ -21,4 +22,4 @@ if (isset ($_FILES['file1'])) {
 
 ?>
 
-</form>
+

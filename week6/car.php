@@ -14,3 +14,6 @@ class Car {
         echo "Drive the " . $this->model . "<br />";
     }
 }
+
+$car = new Car ("Kia Rio");
+$car->drive();

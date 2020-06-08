@@ -106,7 +106,7 @@
          return ($results);
   }
   
-  
+    
   
   function sortTeams ($column, $order) {
       
@@ -116,7 +116,6 @@
         
        
         $stmt = $db->prepare("SELECT id, teamName, division FROM teams ORDER BY $column $order");
-       
         
         
         if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
@@ -126,6 +125,8 @@
          
          return ($results);
   }
+
+
   
   function getFieldNames () {
       $fieldNames = ['teamName', 'division'];
@@ -134,5 +135,15 @@
       
   }
 
+  function checkLogin ($u, $pwd)
+  {
+    return false;
+  }
 
-
+  if (checkLogin ('Tom', 'Brady')) {
+      echo 'Logged In';
+  } else {
+      echo 'NOT logged in';
+  }
+  // CREATE table users
+// INSERT INTO users (userName, userPassword) VALUES ('Tom', sha1('Brady'))
