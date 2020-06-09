@@ -1,10 +1,11 @@
 <?php
+$str = "Brady";
+echo sha1($str) . "<br />";
 
-// '5ece240085b9ad85b64896082e3761c54ef581de'
+echo "74d9e4fc4b49c8b3ac8ef864bb229d41ac3244c7";
+exit;
 $salt = "SECRET";
-$str = "Duck";
 
- echo sha1($str) . "<br />";
 
 echo sha1($salt . $str) . "<br />";
  

@@ -15,5 +15,5 @@ class Car {
     }
 }
 
-$car = new Car ("Kia Rio");
-$car->drive();
+// $car = new Car ("Kia Rio");
+// $car->drive();

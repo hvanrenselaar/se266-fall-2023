@@ -1,7 +1,7 @@
 <?php
 
 if (isset ($_FILES['file1'])) {
-    var_dump ($_FILES);
+   
     $tmp_name = $_FILES['file1']['tmp_name'];
     $path = getcwd() .DIRECTORY_SEPARATOR . 'uploads';
     $new_name = $path . DIRECTORY_SEPARATOR . $_FILES['file1']['name'];

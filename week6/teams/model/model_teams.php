@@ -95,6 +95,7 @@
        $results = [];
         $stmt = $db->prepare("SELECT id, teamName, division FROM teams WHERE $column LIKE :search");
         $search = '%'.$searchValue.'%';
+        // SELECT id, teamName, division FROM teams WHERE teamName LIKE '%Pat%'
         $stmt->bindValue(':search', $search);
        
         
@@ -135,8 +136,10 @@
       
   }
 
+  // SELECT userName FROM users WHERE userName = 'Tom' and userPassword = sha1('Brady')
   function checkLogin ($u, $pwd)
   {
+    global $db;
     return false;
   }
 
