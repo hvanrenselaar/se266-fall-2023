@@ -77,6 +77,11 @@
         return ($results);
    }
    
+   function checkLogin ($userName, $password) {
+    // your logic here
+      
+     
+  }
  
 
    // make sure these functions work
@@ -90,21 +95,7 @@
     //insertSchoolsFromFile('../uploads/schools.csv');
     // $count= getSchoolCount();
     // echo $count;
-    function checkLogin ($userName, $password) {
-        global $db;
-        
-        // SELECT * FROM users WHERE userName = 'Tom' and userPassword = sha1('Brady')
-        $sql = "SELECT * FROM users WHERE userName=:u and userPassword = sha1(:p)";
-        $stmt = $db->prepare($sql);
-        $stmt->bindValue(':u', $userName);
-        $stmt->bindValue(':p', $password);
-       
-        $stmt->execute();
-        
-        return ($stmt->rowCount() > 0);
-         
-        
-     }
+   
     
     
     
