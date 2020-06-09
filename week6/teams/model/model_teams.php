@@ -140,10 +140,18 @@
   function checkLogin ($u, $pwd)
   {
     global $db;
-    return false;
+
+    $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+    $stmt->bindValue(':userName', $u);
+    $stmt->bindValue(':password', sha1($pwd));
+
+    $stmt->execute ();
+
+    return( $stmt->rowCount() > 0);
+
   }
 
-  if (checkLogin ('Tom', 'Brady')) {
+  if (checkLogin ('Tom', 'BradyX')) {
       echo 'Logged In';
   } else {
       echo 'NOT logged in';

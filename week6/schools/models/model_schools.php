@@ -18,7 +18,7 @@
             $school = str_replace("'", "''", htmlspecialchars ($row[0]));
             $city = str_replace("'", "''", htmlspecialchars ($row[1]));
             $state = str_replace("'", "''", htmlspecialchars ($row[2]));
-             
+
             $sql[] = "('" . $school . "' , '" . $city . "' , '" . $state. "')";
             // 1,000 records at a time
             if ($i % 1000 == 0) {
@@ -78,21 +78,28 @@
    }
    
    function checkLogin ($userName, $password) {
-    // your logic here
-      
-     
-  }
+    global $db;
+    $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+
+    $stmt->bindValue(':userName', $userName);
+    $stmt->bindValue(':password', sha1($password));
+    
+    $stmt->execute ();
+   
+    return( $stmt->rowCount() > 0);
+    
+}
  
 
    // make sure these functions work
-    // $schools = getSchools ('New England', '', 'RI');
+    $schools = getSchools ('New England', '', 'RI');
    
-    //  var_dump ($schools);
+    var_dump ($schools);
     
     //   $b = checkLogin('donald', 'duck');
     //    if ($b) echo "Logged in"; else echo "Not logged in";
 
-    //insertSchoolsFromFile('../uploads/schools.csv');
+    // insertSchoolsFromFile('../uploads/schools.csv');
     // $count= getSchoolCount();
     // echo $count;
    
