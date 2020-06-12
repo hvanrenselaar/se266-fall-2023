@@ -40,8 +40,9 @@
         }
       });
       const json = await response.json();
+      
       document.getElementById("resultDiv").innerHTML = JSON.stringify(json);
-      console.log(json.user_name1);
+      //console.log(json.user_name1);
     } catch (error) {
         console.error (error);
      

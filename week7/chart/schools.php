@@ -4,6 +4,7 @@
     include  __DIR__ . '/functions/colorFunctions.php'; 
     
     $schools = getSchoolSummaryInfo();
+    
    
     $results = array();
     $results[0] = array(); // list states

@@ -16,6 +16,8 @@
          
          return ($results);
     }
+
+    
     
     function addTeam ($t, $d) {
         global $db;
@@ -151,10 +153,10 @@
 
   }
 
-  if (checkLogin ('Tom', 'BradyX')) {
-      echo 'Logged In';
-  } else {
-      echo 'NOT logged in';
-  }
+//   if (checkLogin ('Tom', 'BradyX')) {
+//       echo 'Logged In';
+//   } else {
+//       echo 'NOT logged in';
+//   }
   // CREATE table users
 // INSERT INTO users (userName, userPassword) VALUES ('Tom', sha1('Brady'))
