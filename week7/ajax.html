@@ -41,8 +41,10 @@
       });
       const json = await response.json();
       
-      document.getElementById("resultDiv").innerHTML = JSON.stringify(json);
-      //console.log(json.user_name1);
+      //document.getElementById("resultDiv").innerHTML = JSON.stringify(json);
+      document.getElementById("resultDiv").innerHTML = json;
+      
+      console.log(json);
     } catch (error) {
         console.error (error);
      

@@ -10,7 +10,7 @@ if ($contentType === "application/json") {
 
   //If json_decode failed, the JSON is invalid.
   if( is_array($decoded)) {
-      echo json_encode("*" . $decoded['user_name2'] . "*");
+      echo json_encode($decoded['user_name1']);
   } else {
     // Send error back to user.
   }

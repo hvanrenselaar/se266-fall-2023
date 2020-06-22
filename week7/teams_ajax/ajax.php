@@ -20,7 +20,7 @@ if ($contentType == "application/json") {
         $team = getTeam ($decoded['id']);
         echo json_encode($team);
     } else {
-        
+        echo json_encode(getTeams());
     }
 
 }
