@@ -21,6 +21,7 @@
 
             printLocalNumberAndTryToChangeIt();
             echo "Outside the function a is still $a. The local number did not change it!<br />";
+           
         ?>
             <h2>Test Heads or Tails</h2>
             <?php
