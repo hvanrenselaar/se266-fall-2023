@@ -30,9 +30,9 @@ $title = 'my page title ' . $titles[$rand];
         <h1><?php echo $title; ?></h1>
         
         <ul>   
-        <?php for ($index = 0; $index < $myListLength; $index++): ?>
+        <?php for ($index = 0; $index < $myListLength; $index++){ ?>
             <li><?php echo $myList[$index] ?> </li>    
-        <?php endfor; ?>
+        <?php } ?>
         </ul> 
                
         

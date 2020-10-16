@@ -28,7 +28,7 @@
        <table border="1" cellpadding="5">
 
         <?php 
-            define("ROWS", 5);
+            define("ROWS", 15);
             define("COLS", 8);
             
             for($row = 1; $row <= ROWS; $row++):?>

@@ -6,14 +6,16 @@
         //     echo "You are NOT an adult";
         // }
         // echo "Form submitted<hr />";
-        // $value = filter_input(INPUT_POST, 'val1', FILTER_VALIDATE_FLOAT);
-        // if ($value == "") {
-        //     echo "You did not submit a number!";
-        // }
-        // echo $value;
+        $value = filter_input(INPUT_POST, 'val1', FILTER_VALIDATE_FLOAT);
+        echo "$value ****";
+        if (!is_numeric($value)) {
+             echo "You did not submit a number!";
+         }
+        
         $state = filter_input (INPUT_POST, 'state');
+        
+      
         echo $state;
-        //var_dump ($_POST);
     } else {
         echo "Initial load of form";
     }
@@ -36,7 +38,7 @@
         <select name="state">
             <option>Rhode Island</option>
             <option>Massachusetts</option>
-            <option>Connecticut</option>
+            <option selected>Connecticut</option>
             <option>Maine</option>
             <option>New Hampshire</option>
             <option>Vermont</option>

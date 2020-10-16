@@ -1,12 +1,14 @@
 <?php
-    var_dump ($_POST);
-    //$firstName = filter_input(INPUT_POST, 'firstName'); 
+    
     $firstName = "";
     $error = "";
     if (isset($_POST['btnSubmit'])) {
         $firstName = filter_input(INPUT_POST, 'firstName'); 
+        $oldEnough = isset($_POST['oldEnoughToDrive']);
         if (isset($_POST['oldEnoughToDrive'])) {
-            
+            $oldEnough = true;
+        } else {
+            $oldEnough = false;
         }
         if ($firstName == "") {
             $error .= "No first name provided";
@@ -31,7 +33,8 @@
     ?>
     <br />
     <form method="post" action="formtest1.php">
-    <label>First Name:</label><input type="text" value="<?= $firstName?>" name="firstName" /><br />
+        <label>First Name:</label>
+        <input type="text" value="<?php echo $firstName; ?>" name="firstName" /><br />
         <label>Old enough to drive</label>
         <input type="checkbox" name="oldEnoughToDrive" value="yes">
         <br />

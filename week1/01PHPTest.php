@@ -8,7 +8,7 @@
 		<h1>SE 266 - Hello World</h1>
        
        <?php
-            echo "Welcome to PHP. PHP rocks!";
+            echo "Welcome to PHP. PHP *really* rocks!";
         ?>
        
     </body>

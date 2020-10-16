@@ -47,7 +47,7 @@
                 if ($balance < 0) $balance=0;
         ?>
             <tr>
-                <td><?php echo $month; ?></td>
+                <td><?= $month; ?></td>
                 <td><?php echo "$" .number_format($interestPaid, 2); ?></td>
                 <td><?php echo "$" . number_format($balance, 2); ?></td>
                 

@@ -8,10 +8,10 @@
         $number_2 = 25;
     }
     $error = "";
-    if ($number_1 == "") {
+    if (!is_numeric($number_1)) {
         $error .= "<li>Number 1 must be a valid number</li>";
     }
-    if ($number_2 == "") {
+    if (!is_numeric($number_1)) {
         $error .= "<li>Number 2 must be a valid number</li>";
     }
     

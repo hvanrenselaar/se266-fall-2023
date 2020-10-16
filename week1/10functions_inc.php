@@ -29,7 +29,12 @@
                 $tailsCount = 0;
 
                 for ($i=0; $i<1000; $i++) {
-                    if (headsOrTails() == "heads") $headsCount++; else $tailsCount++;
+                    if (headsOrTails() == "heads") {
+                        $headsCount++; 
+                    }
+                    else {
+                        $tailsCount++;
+                    }
                 }
                 echo "Heads Count: $headsCount<br />";
                 echo "Tails Count: $tailsCount<br />";
