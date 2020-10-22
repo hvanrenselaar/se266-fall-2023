@@ -13,7 +13,7 @@ class Car {
         $this->model = $model;
     }
     public function drive() {
-        echo "Drive the car";
+        echo "Drive " . $this->model;
     }
 }
 
@@ -22,4 +22,4 @@ $c2 = new Car("Honda Accord");
 
 $c->setModel( "BMW");
 $c->drive();
-var_dump ($c);
+//var_dump ($c);

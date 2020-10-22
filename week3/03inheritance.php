@@ -61,14 +61,14 @@ class Student extends Person {
 }
 
 $s = new Student('Mickey', 'Mouse', '123456789', 3.5);
-var_dump ($s);
+//var_dump ($s);
 
 $p = new Person ('Donald', 'Duck');
 exit;
-echo Student::getObjectCount() . "<br />";
+echo $s->getObjectCount() . "<br />";
 echo $s->getFullName() . "<br />";
 echo $s->getStudentId() . "<br />";
 echo "<hr />";
-echo $p->getFullName() . "<br />";
-echo Student::getObjectCount() . "<br />";
+// echo $p->getFullName() . "<br />";
+// echo Student::getObjectCount() . "<br />";
 ?>
