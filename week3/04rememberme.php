@@ -17,7 +17,7 @@
 </head>
 <body>
     <form method="post">
-        <input type="text" name="amount" value="<?= $amount ?>" />
+        <input type="hidden" name="amount" value="<?= $amount ?>" />
         <input type="submit" name="addAmount" />
     </form>
 </body>
