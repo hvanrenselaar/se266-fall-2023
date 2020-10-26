@@ -1,7 +1,9 @@
 <?php
     if (isset($_POST['addAmount'])) {
+        $addAmount = filter_input (INPUT_POST, 'additionalAmount');
+     
         $amount = filter_input (INPUT_POST, 'amount');
-        $amount += 5;
+        $amount += $addAmount;
         //echo $amount;
     } else {
         $amount = 100;
@@ -17,7 +19,8 @@
 </head>
 <body>
     <form method="post">
-        <input type="hidden" name="amount" value="<?= $amount ?>" />
+        <input type="text" name="additionalAmount" value="5" />
+        <input type="text" name="amount" value="<?= $amount ?>" />
         <input type="submit" name="addAmount" />
     </form>
 </body>

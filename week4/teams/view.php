@@ -1,3 +1,10 @@
+<?php
+        
+        include __DIR__ . '/model/model_teams.php';
+        $teams = getTeams ();
+        
+    ?>
+    
 <html lang="en">
 <head>
   <title>View NFL Team</title>
@@ -13,12 +20,7 @@
     <div class="col-sm-offset-2 col-sm-10">
         <h1>NFL Teams</h1>
     
-    <?php
-        
-        include __DIR__ . '/model/model_teams.php';
-        $teams = getTeams ();
-        
-    ?>
+   
   
     <table class="table table-striped">
             <thead>

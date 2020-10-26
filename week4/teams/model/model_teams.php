@@ -18,6 +18,7 @@
          return ($results);
     }
     
+
     
     function addTeam ($t, $d) {
         global $db;
@@ -47,9 +48,9 @@
         $stmt->bindValue(':team', $t);
         $stmt->bindValue(':division', $d);
        
-        $stmt->execute();
         
-        if ($stmt->rowCount() > 0) {
+        
+        if ($stmt->execute() && $stmt->rowCount() > 0) {
             $results = 'Data Added';
         }
        
@@ -59,9 +60,9 @@
     }
    
     
-    // $result = addTeam2 ('Feyenoord', 'Eredivisie');
-    // echo $result;
-   
+    //  $result = addTeam2 ('Feyenoord', 'Eredivisie');
+    //  echo $result;
+  
     
 
 ?>
