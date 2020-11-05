@@ -42,7 +42,7 @@
 
 <html lang="en">
 <head>
-  <title>Add NFL Team</title>
+  <title><?= $action ?> NFL Team</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -57,19 +57,19 @@
     
   <h2>Add Team</h2>
   <form class="form-horizontal" action="editTeam.php" method="post">
-      <input type="hidden" name="action" value="<?php echo $action; ?>">
-      <input type="hidden" name="teamId" value="<?php echo $id; ?>">
+      <input type="text" name="action" value="<?= $action; ?>">
+      <input type="text" name="teamId" value="<?= $id; ?>">
       
     <div class="form-group">
       <label class="control-label col-sm-2" for="team name">Team Name:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="team" placeholder="Enter team name" name="team" value="<?php echo $teamName; ?>">
+        <input type="text" class="form-control" id="team" placeholder="Enter team name" name="team" value="<?= $teamName; ?>">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">Division:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="division" placeholder="Enter division" name="division" value="<?php echo $division; ?>">
+        <input type="text" class="form-control" id="division" placeholder="Enter division" name="division" value="<?= $division; ?>">
       </div>
     </div>
     

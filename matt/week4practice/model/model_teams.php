@@ -19,7 +19,6 @@
     }
     
 
-
     
     function addTeam ($t, $d) {
         global $db;
@@ -61,10 +60,9 @@
     }
    
     
-    //   $result = addTeam2 ('Ajax', 'Eredivisie');
-    //   echo $result;
-    
+    //  $result = addTeam2 ('Feyenoord', 'Eredivisie');
+    //  echo $result;
+  
     
 
 ?>
-

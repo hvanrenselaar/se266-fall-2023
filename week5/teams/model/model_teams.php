@@ -32,13 +32,13 @@
         return ($results);
     }
     
-
+    
 
     function updateTeam ($id, $team, $division) {
         global $db;
 
         $results = "";
-
+        
         $stmt = $db->prepare("UPDATE teams SET teamName = :team, division = :division WHERE id=:id");
         
         $stmt->bindValue(':id', $id);
@@ -53,13 +53,14 @@
         return ($results);
     }
     
-    
+   
     
     
     function deleteTeam ($id) {
         global $db;
         
         $results = "Data was not deleted";
+    
         $stmt = $db->prepare("DELETE FROM teams WHERE id=:id");
         
         $stmt->bindValue(':id', $id);
@@ -70,7 +71,8 @@
         
         return ($results);
     }
-    
+   
+ 
   
   
 
@@ -78,6 +80,7 @@
          global $db;
         
         $result = [];
+        
         $stmt = $db->prepare("SELECT id, teamName, division FROM teams WHERE id=:id");
         $stmt->bindValue(':id', $id);
        
@@ -89,7 +92,7 @@
          return ($result);
     }
 
-  
+   
 
     
     
