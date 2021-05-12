@@ -1,11 +1,12 @@
 <?php
+    
     if (isset($_POST['submitBtn'])) {
-        // if (isset($_POST['adult'])) {
-        //     echo "You're an adult";
-        // } else {
-        //     echo "You are NOT an adult";
-        // }
-        // echo "Form submitted<hr />";
+        if (isset($_POST['adult'])) {
+            echo "You're an adult";
+        } else {
+            echo "You are NOT an adult";
+        }
+        echo "Form submitted<hr />";
         $value = filter_input(INPUT_POST, 'val1', FILTER_VALIDATE_FLOAT);
         echo "$value ****";
         if (!is_numeric($value)) {
@@ -32,7 +33,7 @@
     <h1>Demo Forms</h1>
     <form action="demoforms.php" method="post">
         <input type="text" name="val1" value="Whatever" />
-        <input type="checkbox" value="Adult" name="adult" checked>Adult<br />
+        <input type="checkbox" value="Adult" name="adult" >Adult<br />
         <input type="radio" value="single" name="status">Single
         <input type="radio" value="relationship" name="status">In a relationship<br />
         <select name="state">

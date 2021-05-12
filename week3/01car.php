@@ -21,5 +21,5 @@ $c = new Car("Toyota Yaris");
 $c2 = new Car("Honda Accord");
 
 $c->setModel( "BMW");
-$c->drive();
-//var_dump ($c);
+// $c->drive();
+var_dump ($c);

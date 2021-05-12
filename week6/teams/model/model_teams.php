@@ -160,3 +160,11 @@
 //   }
   // CREATE table users
 // INSERT INTO users (userName, userPassword) VALUES ('Tom', sha1('Brady'))
+
+function validUser ($username, $password) {
+
+}
+
+function searchPatients ($first, $last, $married) {
+    
+}

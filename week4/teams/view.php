@@ -2,7 +2,6 @@
         
         include __DIR__ . '/model/model_teams.php';
         $teams = getTeams ();
-        
     ?>
     
 <html lang="en">

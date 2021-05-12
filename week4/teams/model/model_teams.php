@@ -6,6 +6,7 @@
     function getTeams () {
         global $db;
         
+        
         $results = [];
 
         $stmt = $db->prepare("SELECT id, teamName, division FROM teams ORDER BY teamname"); 
@@ -17,8 +18,6 @@
          
          return ($results);
     }
-    
-
 
     
     function addTeam ($t, $d) {
@@ -40,6 +39,7 @@
         return ($results);
     }
    
+
     function addTeam2 ($t, $d) {
         global $db;
         $results = "Not added";

@@ -43,13 +43,13 @@
                 <label>Number 1:</label>
             </div>
             <div>
-                <input type="text" name="number_1" value="<?php $number_1; ?>" />
+                <input type="text" name="number_1" value="<?php echo $number_1; ?>" />
             </div>
             <div class="label">
                 <label>Number 2:</label>
             </div>
             <div>
-                <input type="text" name="number_2" value="<?= $number_2; ?>"" />
+                <input type="text" name="number_2" value="<?= $number_2; ?>" />
             </div>
             <div>
                 &nbsp;
